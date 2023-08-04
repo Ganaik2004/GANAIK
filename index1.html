@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      />
+      <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            list-style: none;
+            text-decoration: none;
+            scroll-behavior: smooth;
+            border: none;
+            outline: none;
+        }
+
+        :root {
+            --bg-color: #080808;
+    --bg-2: #262626;
+    --color: #fff;
+    --main-color: #ff004f;
+    --color-2: #c8c8c8;
+    --h1-font: 2.5rem;
+    --p-font: .9rem;
+        }
+        body.dark {
+    --bg-color: #fff;
+    --color: #080808;
+    --main-color: #ff004f;
+    --color-2: #616161;
+    --bg-2: #f6f6f6;
+}
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+
+        body {
+            background-color:var(--bg-color);
+        }
+
+        section {
+            padding: 50px 4% 10px;
+        }
+
+        .services {
+            background: var(--bg-color);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-center h2 {
+            color: var(--color);
+            font-family: 'Dosis', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .text-center h4 {
+            color: var(--color);
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .section-item {
+            position: relative;
+            overflow: hidden;
+            padding: 50px 50px;
+        }
+
+        .services-box {
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+            background: var(--bg-2);
+            color: var(--color);
+            /* cursor: pointer; */
+            border-radius: .8rem;
+            padding: 35px 16px;
+            transition: all ease-in .1s;
+        }
+        .services-box i {
+            font-size: 50px;
+            color: var(--main-color);
+        }
+        .services-box:hover  {
+           background-color: var(--main-color);
+        }
+        .services-box:hover .i--1{
+            color: var(--color);
+        }
+        .services-box:hover .p--2{
+            color: var(--color);
+        }
+
+      .services-box:hover .s-btn{
+        border-color: var(--color);
+    color: var(--color);
+      }
+      .services-box:hover .s-btn:hover{
+        background-color: var(--color);
+    color: var(--main-color);
+    transform: translateY(-5px);
+      }
+        .services-box p {
+            font-size: .8rem;
+            color: var(--color-2);
+            line-height: 1.5;
+        }
+
+        .s-btn {
+            display: inline-block;
+            padding: 8px 14px;
+            /* background-color: var(--bg-2); */
+            color: var(--main-color);
+            font-size: .8rem;
+            font-weight: 400;
+            border: 1.5px solid var(--main-color);
+            border-radius: 30px;
+            margin-top: 10px;
+            transition: all ease .5s;
+        }
+
+       
+
+        .nav-btn{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+}
+.ex1{
+    transform: translateX(15px);
+}
+.ex{
+    transform: translateX(-15px);
+}
+.nav-btn::after,
+.nav-btn::before{
+font-size: 20px;
+color: var(--main-color);
+}
+.swiper-pagination-bullet{
+    background-color: var(--color);
+}
+.swiper-pagination-bullet-active{
+    background-color:var(--main-color);
+}
+.dark-light-mode {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+.dark-light-mode i {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 28px;
+    color: var(--color);
+}
+
+    </style>
+</head>
+
+<body>
+    <section class="services" id="services1">
+        <div class="text-center">
+            <h2>MY Work</h2>
+            <h4>We Work With You, Not For You</h4>
+        </div>
+        <div class="section-item mySwiper">
+            <div class="swiper-wrapper">
+                <div class="services-box flex swiper-slide">
+                    <i class='bx bx-mobile-alt i--1'></i>
+                    <h3>Web Design</h3>
+                    <p class="p--2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit cumque, quos neque animi qui
+                        accusantium voluptatibus fugiat reprehenderit culpa rerum?</p>
+                    <a href="Project7/index.html" class="s-btn">Read More</a>
+                </div>
+                <div class="services-box flex swiper-slide">
+                    <i class='bx bx-code-alt i--1'></i>
+                    <h3>Web Development</h3>
+                    <p class="p--2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit cumque, quos neque animi qui
+                        accusantium voluptatibus fugiat reprehenderit culpa rerum?</p>
+                    <a href="Project4/index.html" class="s-btn">Read More</a>
+                </div>
+                <div class="services-box flex swiper-slide">
+                    <i class='bx bx-signal-5 i--1'></i>
+                    <h3>SEO Marketing</h3>
+                    <p class="p--2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit cumque, quos neque animi qui
+                        accusantium voluptatibus fugiat reprehenderit culpa rerum?</p>
+                    <a href="Project8/index.html" class="s-btn">Read More</a>
+                </div>
+                <div class="services-box flex swiper-slide">
+                    <i class='bx bxs-cable-car i--1'></i>
+                    <h3>SEO Marketing</h3>
+                    <p class="p--2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit cumque, quos neque animi qui
+                        accusantium voluptatibus fugiat reprehenderit culpa rerum?</p>
+                    <a href="Project7/index.html" class="s-btn">Read More</a>
+                </div>
+                <div class="services-box flex swiper-slide">
+                    <i class='bx bxs-store-alt i--1'></i>
+                    <h3>SEO Marketing</h3>
+                    <p class="p--2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit cumque, quos neque animi qui
+                        accusantium voluptatibus fugiat reprehenderit culpa rerum?</p>
+                    <a href="Project10/index.html" class="s-btn">Read More</a>
+                </div>
+               
+            </div>
+            <div class="swiper-button-next nav-btn ex1"></div>
+            <div class="swiper-button-prev nav-btn ex"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+    </section>
+    <div class="dark-light-mode flex">
+        <i class='bx bxs-sun' id="bright"></i>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+         var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 50,
+        // slidesPerGroup: 3,
+        loop: true,
+        centerSlide:'true',
+        fade:'true',
+        grabCursor:'true',
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets:true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints:{
+            0:{
+                slidesPerView:1,
+            },
+            700:{
+                slidesPerView:2,
+            },
+            1050:{
+                slidesPerView:3,
+            },
+        },
+      });
+      let darkmode = document.querySelector(".dark-light-mode");
+let body = document.querySelector("body");
+let bright1 = document.querySelector(".bxs-sun");
+darkmode.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    if (body.classList.contains("dark")) {
+        bright1.classList.replace("bxs-sun", "bxs-moon")
+    } else {
+        bright1.classList.replace("bxs-moon", "bxs-sun")
+    }
+});
+    </script>
+</body>
+
+</html>

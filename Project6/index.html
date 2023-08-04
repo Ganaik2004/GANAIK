@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+      
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1190px;
+            margin-inline: auto;
+            padding-inline: 30px;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            line-height: 1.2;
+        }
+
+        p{
+            font-size: 0.9rem;
+        }
+        .primary{
+            background-color: #2E6B75;
+            padding: 11.2px 20.2px;
+            border: none;
+            color: #FFFFFF;
+            font-weight: 600;
+            border-radius: 30px;
+            font-size: 13px;
+            transition: .3s ease-out;
+        }
+        .primary:hover{
+            background-color: #163237;
+        }
+        .secondary{
+            background-color: #91C2BE;
+            color: #FFFFFF;
+            border: none;
+            font-size: 13px;
+            padding: 11.2px 35.2px;
+            border-radius: 30px;
+            transition: .3s ease-out;
+        }
+        .secondary:hover{
+            background-color: #5aa29c;
+        }
+/* navbar */
+        .logo {
+            width: 150px;
+            color: #2E6B75;
+        }
+         .links{
+            color: #6C7577;
+            transition: .3s ease-out;
+            font-size: 0.8rem;
+         }
+         .links:hover{
+            color: #163237;
+         }
+        nav {
+            position: absolute;
+            width: 90%;
+            top: 0px;
+            left: 2.9%;
+            right: 2.9%;
+            gap: 20px;
+            padding: 20px;
+
+        }
+         .im-1{
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #163237;
+            width: 40px;
+         }
+        .content {
+            width: 80%;
+            justify-content: space-between;
+        }
+
+        .nav-links {
+            width: 57%;
+            gap: 30px;
+        }
+
+
+        header {
+            justify-content: space-between;
+            height: 100vh;
+            margin-bottom: 80px;
+        }
+        .header-content h1{
+            color: #2E6B75;
+        }
+        .header-content p{
+            color: #6C7577;
+        }
+        .header-content {
+            flex-direction: column;
+            flex-basis: 40%;
+            gap: 20px;
+            margin-top: 50px;
+            margin-left: 3%;
+        }
+
+        .image {
+            flex-basis: 50%;
+        }
+
+        .image img {
+            height: 100vh;
+            width: 100%;
+            border-bottom-left-radius: 100px;
+            object-fit: cover;
+        }
+
+
+        .section-1 {
+            height: 100%;
+            padding-block: 70px;
+        }
+
+        .heading {
+            margin-bottom: 40px;
+            padding-left: 25px;
+            color: #2E6B75;
+        }
+         .div-4{
+            margin-top: 20px;
+         }
+         .div-3{
+            color: #B9CDD0;
+         }
+         
+        .features-card {
+            flex-direction: column;
+            gap: 20px;
+            width: 33.33%;
+            padding: 55px;
+            align-items: flex-start;
+            margin-inline: 3px;
+            border-radius: 50px;
+            background-color: #49858f;
+            color: whitesmoke;
+        }
+
+
+
+  
+        .section-2{
+            background-color: #EFF6FA;
+            width: 100%;
+            padding-block: 80px;
+        }
+        .example-con h2{
+            color: #2E6B75;
+            font-size: 1.7rem;
+        }
+        .example-con p{
+           
+            color: #767676;
+        }
+        .example-heading {
+            margin-bottom: 30px;
+        }
+       .example-heading h1{
+        margin-bottom: 30px;
+        color: #2E6B75;
+       }
+       .number{
+        color: #92C3BE;
+        font-size: 1.7rem;
+       }
+       .example-heading hr{
+        border: none;
+        height: 1px;
+        background-color: #92C3BE;
+       }
+        .example-area {
+            flex-wrap: wrap;
+            align-items: flex-start;
+            row-gap: 20px;
+        }
+
+        .examples-cards {
+            width: 33.33%;
+            padding: 20px;
+        }
+
+        .collect {
+            flex-direction: column;
+            gap: 20px;
+            border-left: 1px solid #92C3BE;
+            padding-inline: 12%;
+            align-items: flex-start;
+        }
+        .example-con h2{
+            margin-bottom: 10px;
+        }
+        .seperate{
+            flex-direction: column;
+            gap: 30px;
+            align-items: flex-start;
+           color: white;
+        }
+        .seperate a{
+            text-align: center;
+        }
+        .collect-2{
+            padding-inline: 12%;
+            padding-block: 40px;
+            background-color: #2E6B75;
+        }
+
+        /* footer */
+       .footer-head{
+        color: #FFFFFF;
+        font-size: 1.3rem;
+       }
+        footer{
+            background-color: #2E6B75;
+        }
+        .div-1a{
+            width: 25%;
+        }
+        .fle{
+            display: flex;
+            align-items: flex-start;
+        }
+        .div-2a{
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+           padding-inline: 30px;
+        }
+        .flex1{
+            padding-block: 80px;
+        }
+        .div-2a p{
+            line-height: 2;
+            color: #b9cdd0;
+        }
+        .copy{
+            margin-top: 40px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    </style>
+      <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <nav class="flex container">
+        <div class="logo">Morbirise Theme</div>
+        <div class="content  flex" id="nav-links">
+            <ul class="nav-links flex">
+                <li><a href="" class="links">About Us</a></li>
+                <li><a href="" class="links">Services</a></li>
+                <li><a href="" class="links">Contact</a></li>
+            </ul>
+            <a href="index1.html" class="primary">Sign Up/Login</a>
+        </div>
+       <a href="#" class="im-1" id="nav-toggle"><i class="fa-solid fa-bars"></i></a>
+    </nav>
+    <header class="container flex">
+
+
+        <div class="header-content flex">
+            <h1>A Better IT Solution Your Business</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem sapiente itaque ad fugiat tempore
+                assumenda aperiam esse in, quasi Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, cum.
+            </p>
+        </div>
+        <div class="image">
+            <img src="asset 0.jpeg" alt="">
+        </div>
+
+
+    </header>
+    <section class="section-1 ">
+        <div class="container section-a">
+            <h1 class="heading">Our featured services</h1>
+            <div class="features-area flex">
+                <div class="features-card flex">
+                    <div class="div-1">
+                        <img src="asset 1.svg" alt="">
+                    </div>
+                    <div class="div-2">
+                        <h2>No Coding</h2>
+                    </div>
+                    <div class="div-3">
+                      <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto delectus omnis perspiciatis esse
+                        aut vitae?</p> 
+                    </div>
+                    <div class="div-4">
+                        <a href="#" class="secondary">Learn More ></a>
+                    </div>
+                </div>
+                <div class="features-card flex">
+                    <div class="div-1">
+                        <img src="asset 2.svg" alt="">
+                    </div>
+                    <div class="div-2">
+                        <h2>Mobile Friendly</h2>
+                    </div>
+                    <div class="div-3">
+                       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto delectus omnis perspiciatis esse
+                        aut vitae?</p> 
+                    </div>
+                    <div class="div-4">
+                        <a href="#" class="secondary">Learn More ></a>
+                    </div>
+                </div>
+                <div class="features-card flex">
+                    <div class="div-1">
+                        <img src="asset 3.svg" alt="">
+                    </div>
+                    <div class="div-2">
+                        <h2>Unique Styles</h2>
+                    </div>
+                    <div class="div-3">
+                     <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto delectus omnis perspiciatis esse
+                        aut vitae?</p>  
+                    </div>
+                    <div class="div-4">
+                        <a href="#" class="secondary">Learn More ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-2">
+        <div class="container mar">
+            <div class="example-heading">
+                <h1 class="heading-2">Automated Software</h1>
+                <hr>
+            </div>
+            <div class="example-area flex">
+                <div class="examples-cards">
+                    <div class="collect flex">
+                        <div class="number">/01</div>
+                        <div class="example-con">
+                            <h2>Specification</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita sapiente ducimus
+                                adipisci laboriosam fugit soluta.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="examples-cards">
+                    <div class="collect flex">
+                        <div class="number">/02</div>
+                        <div class="example-con">
+                            <h2>Project Planning</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita sapiente ducimus
+                                adipisci laboriosam fugit soluta.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="examples-cards">
+                    <div class="collect flex">
+                        <div class="number">/03</div>
+                        <div class="example-con">
+                            <h2>Deployment</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita sapiente ducimus
+                                adipisci laboriosam fugit soluta.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="examples-cards">
+                    <div class="collect flex">
+                        <div class="number">/04</div>
+                        <div class="example-con">
+                            <h2>Our Philosophy</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita sapiente ducimus
+                                adipisci laboriosam fugit soluta.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="examples-cards">
+                    <div class="collect flex">
+                        <div class="number">/05</div>
+                        <div class="example-con">
+                            <h2>Specification</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita sapiente ducimus
+                                adipisci laboriosam fugit soluta.</p>
+                        </div>
+                    </div>
+                </div>
+               <div class="examples-cards">
+                <div class="collect-2 ">
+                    <div class="seperate flex">
+                        <h2>Project Planning</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veritatis labore et? Ut, totam et?</p>
+                    <a href="" class="secondary">Create your own site</a>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+ <footer>
+    <div class="container flex1 ">
+        <div class="fle">
+            <div class="div-1a">
+                <img src="asset 4.svg" alt="">
+            </div>
+            <div class="div-2a ">
+                <div class="footer-head">About</div>
+                <div class="footer-con">
+                  <p>Help Center</p>
+                  <p>Mobirise Forums</p>
+                  <p>Mobirise Kit</p>
+                </div>
+            </div>
+            <div class="div-2a ">
+                <div class="footer-head">Mobirise Help</div>
+                <div class="footer-con">
+                    <p>Help Center</p>
+                    <p>Mobirise Forums</p>
+                    <p>Mobirise Kit</p>
+                    <p>Our site</p>
+                </div>
+            </div>
+            <div class="div-2a ">
+                <div class="footer-head">Mobirise Extensions</div>
+                <div class="footer-con">
+                   <p>Code Edito</p>
+                   <p>Form Builder</p>
+                   <p>Popup Builder</p>
+                   <p>Enterprise</p>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="copy">© Copyright 2021 Mobirise. All Rights Reserved</div>
+        </div>
+       
+   
+ </footer>
+
+
+ <script src="https://kit.fontawesome.com/659a986349.js" crossorigin="anonymous"></script>
+ <script>
+    const toggleButton = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    })
+  </script>
+</body>
+
+</html>

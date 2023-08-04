@@ -1,0 +1,118 @@
+@media screen and (max-width:954px) {
+    .header-content{
+        flex-basis: 50%;
+        margin-left: 5%;
+    }
+    .image{
+        flex-basis: 40%;
+    }
+    .features-area{
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+    .features-card{
+        width: 49%;
+      
+    }
+    .example-area{
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+    .examples-cards{
+        width: 50%;
+    }
+    .collect{
+        border: none;
+    }
+    .fle{
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+    .div-1a img{
+        margin-inline: 30%;
+    }
+    .div-1a,.div-2a{
+        width: 50%;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:780px){
+    nav{
+        background-color: white;
+    }
+      .im-1{
+        display: block;
+      }
+   .container{
+    max-width: 550px;
+   }
+   .active{
+    top: 60px !important;
+    
+   }
+    .content{
+        position: absolute;
+        top: -250px;
+        width: 100%;
+        left: 0px;
+        height: 250px;
+        flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      background-color: aliceblue;
+      border-radius: 30px;
+      transition: .5s ease-out;
+    }
+    .nav-links{
+     flex-direction: column;
+    }
+   
+    .header-content{
+        gap: 40px;
+        margin-left: 0px;
+    }
+    .image img{
+       width: 100%;
+       height: 100%;
+       border-bottom-left-radius: 0px;
+    }
+    header{
+        margin-top: 60px;
+        flex-direction: column;
+        gap: 30px;
+        height: 100%;
+    }
+    .div-3 p{
+        text-align: start;
+    }
+    .features-card{
+        width: 100%;
+    }
+    .examples-cards{
+        width: 100%;
+    }
+    .number{
+      margin-inline: auto;
+    }
+    
+    .collect{
+        padding-inline: 0px;
+        text-align: center;
+    }
+    .collect-2{
+        padding-inline: 5%;
+    }
+    .seperate h2,p,a{
+        text-align: center;
+       margin-inline: auto;
+    }
+    .fle{
+        flex-direction: column;
+        align-items: center;
+    }
+    .div-1a,.div-2a{
+        width: 70%;
+    }
+}

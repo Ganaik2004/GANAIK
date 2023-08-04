@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+       
+body{
+    overflow-x: hidden;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+        .game-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 10vw);
+            grid-template-rows: repeat(3, 10vw);
+            position: relative;
+        }
+
+        .box {
+            border: 1px solid #000;
+            font-size: 8vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all ease .5s;
+        }
+
+        .box:hover {
+            background-color: rgb(127, 255, 212, 0.5);
+        }
+
+        .game-info {
+            padding: 0 34px;
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+        }
+
+        /* .game-info h1{
+            margin-bottom: 30px;
+        } */
+        .info {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .image img {
+            width: 0;
+            transition: all ease .2s;
+            /* margin-top: 30px; */
+        }
+
+        .br-0 {
+            border-right: 0;
+        }
+
+        .bl-0 {
+            border-left: 0;
+        }
+
+        .bt-0 {
+            border-top: 0;
+        }
+
+        .bb-0 {
+            border-bottom: 0;
+        }
+               
+        #reset {
+        width: 30%;
+        margin-inline: auto;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: bolder;
+            transition: all ease .5s;
+        }
+
+        #reset:hover {
+
+            background-color: transparent;
+            color: #000;
+            border: 2px solid #000;
+        }
+
+        .line {
+            background-color: #000;
+            width: 0;
+            height: 1.5px;
+            position: absolute;
+            border-radius: 3px;
+            transition: all ease .5s;
+        }
+
+        @media screen and (max-width:800px) {
+            .game-container {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+         h1{
+            font-size: 28px;
+         }
+         .info{
+            font-size: 18px;
+         }
+        }
+    </style>
+</head>
+<body> 
+    <div class="game-container">
+        <div class="container">
+            <div class="line"></div>
+            <div class="box  bt-0 bl-0"><span class="boxtext"></span></div>
+            <div class="box bt-0"><span class="boxtext"></span></div>
+            <div class="box bt-0 br-0"><span class="boxtext"></span></div>
+            <div class="box bl-0"><span class="boxtext"></span></div>
+            <div class="box"><span class="boxtext"></span></div>
+            <div class="box br-0"><span class="boxtext"></span></div>
+            <div class="box bb-0 bl-0"><span class="boxtext"></span></div>
+            <div class="box bb-0"><span class="boxtext"></span></div>
+            <div class="box bb-0 br-0"><span class="boxtext"></span></div>
+        </div>
+        <div class="game-info">
+            <h1>Welcome to tic tac toe</h1>
+          
+                <span class="info">Turn for X</span>
+                <button id="reset">Reset</button>
+          
+            <div class="image">
+                <img src="alegre-4097_256.gif" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        console.log("Welcome Tic Tac Toe");
+        let music = new Audio("crash.mp3");
+        let tur = new Audio("crash.mp3");
+        let gameover = new Audio("crash.mp3");
+        let turn = "X";
+        let game = false;
+        // function to change the turn
+        const changeTurn = () => {
+            return turn === "X" ? "0" : "X";
+        }
+        // function to check win
+        const checkWin = () => {
+            let boxtext = document.getElementsByClassName('boxtext');
+            let win = [
+                [0, 1, 2,0,5,0],
+                [3, 4, 5,0,15,0],
+                [6, 7, 8,0,25,0],
+                [0, 3, 6,-10,15,90],
+                [1, 4, 7,0,15,90],
+                [2, 5, 8,10,15,90],
+                [0, 4, 8,0,15,45],
+                [2, 4, 6,0,15,135],
+            ];
+            win.forEach(e => {
+                if ((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[1]].innerText === boxtext[e[2]].innerText) && (boxtext[e[0]].innerText !== "")) {
+                    document.querySelector(".info").innerText = boxtext[e[0]].innerText + " Won";
+                    game = true;
+                    document.querySelector(".image").getElementsByTagName("img")[0].style.width = "100%";
+                    document.querySelector(".line").style.transform = `translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)` 
+                    document.querySelector(".line").style.width="30vw"         
+                      }
+            })
+        }
+        // Main Logic
+        let boxes = document.getElementsByClassName("box");
+        Array.from(boxes).forEach(element => {
+            let boxtexts = element.querySelector(".boxtext");
+            element.addEventListener('click', () => {
+                if ((boxtexts.innerText === "") && !game) {
+                    boxtexts.innerText = turn;
+                    turn = changeTurn();
+                    tur.play();
+                    checkWin();
+                    if (!game) {
+                        document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
+                    }
+                }
+            })
+        })
+        reset.addEventListener('click', () => {
+            let boxtexts = document.querySelectorAll(".boxtext");
+            Array.from(boxtexts).forEach(element => {
+                element.innerText = "";
+            });
+            turn = "X";
+            game = false;
+            document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
+            document.querySelector(".image").getElementsByTagName("img")[0].style.width = "0px";
+            document.querySelector(".line").style.width="0vw"
+        })
+    </script>
+</body>
+</html>

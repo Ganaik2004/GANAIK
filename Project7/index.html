@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/659a986349.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin-inline: auto;
+            padding-inline: 20px;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .hamberger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: black;
+            border-radius: 70px;
+        }
+
+        /* buttons */
+        .primary {
+            padding: 9.6px 32px;
+            background-color: #1F357F;
+            color: #FFFFFF;
+            transition: .2s ease-in;
+            font-size: .9rem;
+            border-radius: 50px;
+        }
+
+        .primary:hover {
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: 0px 0px 30px 0px rgba(86, 90, 221, 0.3);
+        }
+
+        .secondary {
+            padding: 9.6px 32px;
+            color: #000FEF;
+            background-color: #EFF0FF;
+            font-size: .9rem;
+            border-radius: 50px;
+            transition: .2s ease-in;
+        }
+
+        .secondary:hover {
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: 0px 0px 30px 0px rgba(86, 90, 221, 0.3);
+        }
+
+        .links {
+            color: #726C89;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: .2s ease-in;
+        }
+
+        .links:hover {
+            color: #3D2E7C;
+            transform: scale(1.02) translateY(-2px);
+        }
+
+        .third {
+            padding: 20px 60px;
+            background-color: #565ADD;
+            color: #ffffff;
+            transition: .2s ease-in;
+            font-weight: 600;
+            border-radius: 100px;
+            letter-spacing: 1px;
+        }
+
+        .third:hover {
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: 0px 0px 30px 0px rgba(86, 90, 221, 0.3);
+        }
+
+        .four {
+            padding: 16px 20.6px;
+            background-color: #565ADD;
+            color: #ffffff;
+            border: 5px solid #D1D1F7;
+            border-radius: 100px;
+            font-weight: 500;
+            font-size: .9rem;
+            transition: .2s ease-in;
+        }
+
+        .four:hover {
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: 0px 0px 30px 0px rgba(86, 90, 221, 0.3);
+        }
+
+        /* NAVBAR */
+        .logo img {
+            width: 40px;
+        }
+
+        .logo {
+            gap: 10px;
+        }
+
+        .nav-1 {
+            justify-content: space-between;
+        }
+
+        .nav-con {
+            width: 60%;
+        }
+
+        .nav-con ul {
+            justify-content: space-around;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            padding-block: 20px;
+            background-color: white;
+            z-index: 1;
+        }
+
+        .nav-links {
+            height: 40px;
+        }
+
+        /* header */
+        header {
+            margin-top: 81px;
+            background-color: #eff0ff;
+            height: 100%;
+            width: 100%;
+            padding-block: 80px;
+        }
+
+        .header-1 {
+            justify-content: space-between;
+        }
+
+        .header-con {
+            flex-basis: 50%;
+            padding-inline: 3%;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .header-con h1 {
+            font-size: 2.5rem;
+            color: #2B1C50;
+        }
+
+        .header-con p {
+            color: #3D2E7C;
+            line-height: 2;
+        }
+
+        .header-image {
+            flex-basis: 43%;
+            /* margin-left: 10px; */
+            background-color: #9f92ec;
+            border-radius: 30px;
+            padding: 5%;
+        }
+
+        .img-box {
+            width: 100%;
+            border-radius: 30px;
+            vertical-align: middle;
+        }
+
+        /* SECTION 1 */
+        .section-1 {
+            height: 100%;
+            padding-block: 80px;
+        }
+
+        .section-1-con {
+            align-items: flex-start;
+            margin-top: 40px;
+        }
+
+        .section-1-cards {
+            width: 25%;
+            padding-inline: 15px;
+        }
+
+        .div-1 {
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .div-1 img {
+            width: 40px;
+        }
+
+        .div-1 h2 {
+            font-size: 1.2rem;
+        }
+
+        .section-1 h1 {
+            font-size: 3.2rem;
+            text-align: center;
+        }
+
+        .div-2 {
+            margin-top: 25px;
+        }
+
+        .div-2 p {
+            font-size: 0.9rem;
+            color: #777777;
+            text-align: center;
+        }
+
+        /* SECTION-2 */
+        .section-2 {
+            height: 100%;
+            padding-block: 80px;
+        }
+
+        .section-2-con {
+            justify-content: space-between;
+        }
+
+        .section-2-image {
+            flex-basis: 45%;
+        }
+
+        .section-2-content {
+            flex-basis: 50%;
+            justify-content: center;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .section-2-image img {
+            width: 100%;
+            border-radius: 30px;
+        }
+
+        .part1 img {
+            width: 50px;
+            margin-top: 20px;
+        }
+
+        .part2 {
+            flex-basis: 75%;
+        }
+
+        .part2 h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .part2 p {
+            color: #726C89;
+            line-height: 1.8;
+        }
+
+        /* SECTION 3 */
+        .section-3 {
+            height: 100%;
+            background-color: #EFF0FF;
+            padding-block: 80px;
+        }
+
+        .section-3-content {
+            margin-top: 60px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .section-3-heading h1 {
+            font-size: 3.2rem;
+            color: #1B224B;
+            text-align: center;
+        }
+
+        .features-1 {
+            flex-basis: 40%;
+        }
+
+        .collect li {
+            line-height: 2.3;
+            color: #726C89;
+            font-size: 1.1rem;
+        }
+
+        .collect li::before {
+            content: "\2022";
+            color: #565add;
+            font-weight: bold;
+            display: inline-block;
+            width: 1.3em;
+            margin-left: -0em;
+        }
+
+        .collect {
+            flex-direction: column;
+            gap: 15px;
+            /* flex-basis: 100%; */
+            align-items: flex-start;
+            padding: 15% 15%;
+            border-radius: 60px;
+            background-color: #D1D1F7;
+            box-shadow: 0 0 20px 0 lightgray;
+        }
+
+        .features-card-1 p {
+            color: #1F357F;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .features-card-1 {
+            padding-right: 15px;
+        }
+
+        .features-card-1 h2 {
+            letter-spacing: 1px;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        .exa1 {
+            transform: translateX(6%);
+        }
+
+        .exa {
+            background-color: #ffffff;
+            transform: translateX(-6%);
+        }
+
+        /* SECTION-4 */
+        .section-4 {
+            height: 100%;
+            padding-block: 65px;
+        }
+
+        .section-4-heading h1 {
+            text-align: center;
+            font-size: 3.2rem;
+        }
+
+        .section-4-content {
+            margin-top: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 20px;
+        }
+
+        .d1 {
+            flex-basis: 47%;
+            padding-inline: 20px;
+            gap: 10px;
+        }
+
+        .d1 img {
+            width: 50px;
+        }
+
+        .d1 p {
+            line-height: 2;
+            color: #3D5943;
+        }
+
+        /* section 5 */
+        .section-5 {
+            height: 100%;
+            padding-block: 80px;
+            background-color: #EFF0FF;
+        }
+
+        .section-5-image {
+            flex-basis: 50%;
+
+        }
+
+        .section-5-image img {
+            width: 100%;
+            border-radius: 40px;
+        }
+
+        .section-5-content {
+            flex-basis: 50%;
+            flex-direction: column;
+            gap: 20px;
+            padding-inline: 5%;
+            align-items: flex-start;
+        }
+
+        .section-5-content h1 {
+            font-size: 3.2rem;
+            color: #1B224B;
+        }
+
+        .section-5-content p {
+            color: #1F357F;
+            line-height: 2;
+        }
+
+        /* SECTION 6 */
+        .section-6 {
+            height: 100%;
+            padding-block: 80px;
+        }
+
+        .section-6-heading h1 {
+            font-size: 3.2rem;
+            text-align: center;
+        }
+
+        .section-6-content {
+            margin-top: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 20px;
+        }
+
+        .section-6-content .div-img {
+            flex-basis: 16.6%;
+            flex-direction: column;
+        }
+
+        .section-6-content img {
+            width: 110px;
+        }
+
+        /* SECTION 7 */
+        .section-7 {
+            height: 100%;
+            background-color: #eff0ff;
+            padding-block: 80px;
+        }
+
+        .section-7-he {
+            justify-content: center;
+        }
+
+        .section-7-content {
+            padding-inline: 1.5%;
+            flex-basis: 75%;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .section-7-content h1 {
+            font-size: 3.2rem;
+        }
+
+        .section-7-content .p3 {
+            font-weight: 600;
+            color: #232323;
+            line-height: 2;
+            text-align: center;
+        }
+
+        .d2 {
+            text-align: center;
+        }
+
+        .p1 {
+            font-size: .9rem;
+            font-weight: 600;
+            color: #726C89;
+        }
+
+        .p2 {
+            font-size: .9rem;
+            color: #726C89;
+        }
+
+        /* SECTION 8 */
+        .section-8 {
+            height: 100%;
+            padding-block: 80px;
+        }
+
+        .section-8-img {
+            flex-basis: 50%;
+            padding-inline: 20px;
+        }
+
+        .section-8-img img {
+            width: 100%;
+            border-radius: 40px;
+        }
+
+        .section-8-content {
+            flex-basis: 50%;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            padding-inline: 20px;
+        }
+
+        .section-8-content h2 {
+            font-size: 2.2rem;
+        }
+
+        .section-8-content p {
+            font-size: .8rem;
+            color: #232323;
+        }
+/* SECTION-9 */
+.section-9{
+    height: 100%;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background-color: #EFF0FF;
+}
+.section-9-heading{
+    margin-bottom: 45px;
+}
+.section-9-heading h1{
+font-size: 3.2rem;
+text-align: center;
+color: #3D2E7C;
+}
+.accordian{
+    background-color: #D1D1F7;
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.question{
+    padding-block: 10px;
+    justify-content: space-between;
+    gap: 10px;
+    padding-inline: 20px;
+}
+
+.answer{
+    padding-inline: 30px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: .2s ease-in;
+}
+.answer p{
+    line-height: 2;
+    color: #3D2E7C;
+    font-size: .9rem;
+}
+/* .answer.active{
+    max-height: fit-content;
+} */
+.question h4{
+    padding: 10px;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    color: #3D2E7C;
+}
+.icon{
+    transition: transform .2s ease-in;
+  
+}
+.icon.active{
+    transform: rotate(45deg);
+}
+        /* FOOTER */
+        .footer-1 {
+            height: 100%;
+            padding-block: 80px;
+        }
+
+        .footer-cards {
+            flex-basis: 16.6%;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            padding-inline: 3%;
+            color: #3D2E7C;
+        }
+
+        .footer-cards-2 p {
+            line-height: 2.1;
+            font-size: .9rem;
+            text-align: center;
+        }
+
+        /*  SUBFOOTER*/
+        .subfooter {
+            height: 100%;
+            padding-block: 40px;
+            background-color: #D1D1F7;
+        }
+
+        .footer-div-1 {
+            flex-basis: 25%;
+            padding-inline: 10px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .footer-div-2 {
+            flex-basis: 35%;
+            padding-inline: 10px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .footer-div-3 {
+            flex-basis: 40%;
+            padding-inline: 10px;
+            text-align: center;
+        }
+
+        .footer-div-3 p {
+            font-size: .9rem;
+        }
+
+        .footer-div-1 img {
+            width: 35px;
+        }
+
+        @media screen and (max-width:900px) {
+            .hamberger {
+                display: block;
+                float: right;
+                margin-right: 10px;
+            }
+
+            .container {
+                max-width: 780px;
+                padding-inline: 30px;
+            }
+
+            .nav-links a {
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            .nav-con {
+                height: 0px;
+                position: absolute;
+                top: 80px;
+                left: 0px;
+                right: 0px;
+                width: 100%;
+                background-color: white;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+                transition: .3s ease-in-out;
+            }
+
+            .nav-con.active {
+                height: 290px;
+            }
+
+            .nav-con ul {
+                display: block;
+                width: fit-content;
+                margin: 20px auto 0 auto;
+                text-align: center;
+                opacity: 0;
+            }
+
+            .nav-con.active ul {
+                transition-delay: .3s;
+                opacity: 1;
+            }
+
+            .hamberger.active1 .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamberger.active1 .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamberger.active1 .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            /* header */
+            .header-1 {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            .header-con {
+                align-items: center;
+            }
+
+            .header-con h1 {
+                text-align: center;
+            }
+
+            .header-con p {
+                text-align: center;
+            }
+
+            .header-image {
+                padding: 9%;
+            }
+
+            /* section-1 */
+            .section-1-con {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .section-1-cards {
+                width: 100%;
+            }
+
+            .div-1 {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            /* section-2 */
+            .section-2 {
+                padding-block: 50px;
+            }
+
+            .section-2-con {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .section-2-image {
+                padding: 20px;
+            }
+
+            .ex12 {
+                flex-direction: column-reverse;
+            }
+
+            /* SECTION-3 */
+            .section-3-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+            }
+
+            .features-1 {
+                width: 100%;
+                padding-inline: 30px;
+            }
+
+            .exa1 {
+                transform: translateX(0);
+            }
+
+            .exa {
+                transform: translateX(0);
+            }
+
+            .collect {
+                align-items: center;
+            }
+
+            .features-card-1 {
+                text-align: center;
+                padding-right: 0px;
+            }
+
+            /* SECTION-4 */
+            .section-4-content {
+                flex-direction: column;
+            }
+
+            /* SECTION-5 */
+            .section-5-con {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            .section-5-image {
+                padding-inline: 30px;
+            }
+
+            .section-5-content {
+                text-align: center;
+                align-items: center;
+            }
+
+            /* SECTION-6 */
+            .section-6-content .div-img {
+                flex-basis: 25%;
+            }
+
+            /* SECTION-7 */
+            .section-7-content {
+                flex-basis: 100%;
+            }
+
+            /* SECTION-8 */
+            .section-8-con {
+                flex-direction: column-reverse;
+                gap: 50px;
+            }
+
+            .section-8-content {
+                align-items: center;
+                text-align: center;
+            }
+
+            /* FOOTER */
+            .footer-content {
+                flex-wrap: wrap;
+                row-gap: 30px;
+            }
+
+            .footer-cards {
+                flex-basis: 50%;
+            }
+
+            /* SUBFOOTER */
+            .subfooter-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+
+        @media screen and (max-width:650px) {
+            .container {
+                max-width: 570px;
+            }
+
+            .footer-cards {
+                flex-basis: 100%;
+            }
+
+            .section-6-content .div-img {
+                flex-basis: 50%;
+            }
+            .accordian{
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container flex nav-1">
+            <div class="logo flex">
+                <img src="asset 0.png" alt="">
+                <h2>WorkflowM5</h2>
+            </div>
+            <div class="hamberger" id="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-con" id="nav-links">
+                <ul class="flex nav-links">
+                    <a href="" class="links">Home</a>
+                    <a href="" class="links">About</a>
+                    <a href="" class="links">Contacts</a>
+                    <a href="" class="primary">Get Started</a>
+                    <a href="" class="secondary">Help</a>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <header>
+        <div class="container flex header-1">
+            <div class="header-con flex">
+                <h1>Web Chat Communication App</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate numquam aperiam laborum cumque
+                    magnam obcaecati?</p>
+                <a href="" class="third">Get Started Now</a>
+            </div>
+            <div class="header-image">
+                <img class="img-box" src="asset 1.jpeg" alt="">
+            </div>
+        </div>
+    </header>
+    <section class="section-1">
+        <div class="container">
+            <h1>Features</h1>
+            <div class="section-1-con flex">
+                <div class="section-1-cards">
+                    <div class="div-1 flex">
+                        <img src="settings.png" alt="">
+                        <h2>Optimiztion</h2>
+                    </div>
+                    <div class="div-2">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, consequuntur!</p>
+                    </div>
+                </div>
+                <div class="section-1-cards">
+                    <div class="div-1 flex">
+                        <img src="hierarchy-structure.png" alt="">
+                        <h2>Structure</h2>
+                    </div>
+                    <div class="div-2">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, consequuntur!</p>
+                    </div>
+                </div>
+                <div class="section-1-cards">
+                    <div class="div-1 flex">
+                        <img src="rocket.png" alt="">
+                        <h2>Productivity</h2>
+                    </div>
+                    <div class="div-2">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, consequuntur!</p>
+                    </div>
+                </div>
+                <div class="section-1-cards">
+                    <div class="div-1 flex">
+                        <img src="to-do-list.png" alt="">
+                        <h2>Workflow</h2>
+                    </div>
+                    <div class="div-2">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, consequuntur!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-2">
+        <div class="container section-2-con flex">
+            <div class="section-2-image">
+                <img src="asset 2.jpeg" alt="">
+            </div>
+            <div class="section-2-content flex">
+                <div class="part1">
+                    <img src="clock.png" alt="">
+                </div>
+                <div class="part2">
+                    <h2>Increase Your Productivity</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quas odit max</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-2">
+        <div class="container section-2-con flex ex12">
+
+            <div class="section-2-content flex">
+                <div class="part1">
+                    <img src="notes.png" alt="">
+                </div>
+                <div class="part2">
+                    <h2>Optimize work processes</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quas odit max</p>
+                </div>
+            </div>
+            <div class="section-2-image">
+                <img src="asset 3.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="section-3">
+        <div class="container">
+            <div class="section-3-heading">
+                <h1>Choose pricing the plan</h1>
+            </div>
+            <div class="section-3-content flex">
+                <div class="features-1 ">
+                    <div class="collect flex exa1">
+                        <div class="features-card-1">
+                            <h2>Business</h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="features-card-2">
+                            <ul class="list">
+                                <li>Optimization</li>
+                                <li>Structure</li>
+                                <li>Productivity</li>
+                                <li>Workflow</li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="four">Get Started</a>
+
+                    </div>
+                </div>
+                <div class="features-1  ">
+                    <div class="collect flex exa ">
+                        <div class="features-card-1">
+                            <h2>Enterprise</h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="features-card-2">
+                            <ul class="list">
+                                <li>Optimization</li>
+                                <li>Structure</li>
+                                <li>Productivity</li>
+                                <li>Workflow</li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="four">Get Started</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-4">
+        <div class="container">
+            <div class="section-4-heading">
+                <h1>Structure work processes</h1>
+            </div>
+            <div class="section-4-content flex">
+                <div class="d1 flex">
+                    <img src="check-mark.png" alt="">
+                    <p>Lorem ipsum dolor sit amet. lorem hfbv wbnfjkb jsif</p>
+                </div>
+                <div class="d1 flex">
+                    <img src="check-mark.png" alt="">
+                    <p>Lorem ipsum dolor sit amet. lorem hfbv wbnfjkb jsif</p>
+                </div>
+                <div class="d1 flex">
+                    <img src="check-mark.png" alt="">
+                    <p>Lorem ipsum dolor sit amet. lorem hfbv wbnfjkb jsif</p>
+                </div>
+                <div class="d1 flex">
+                    <img src="check-mark.png" alt="">
+                    <p>Lorem ipsum dolor sit amet. lorem hfbv wbnfjkb jsif</p>
+                </div>
+                <div class="d1 flex">
+                    <img src="check-mark.png" alt="">
+                    <p>Lorem ipsum dolor sit amet. lorem hfbv wbnfjkb jsif</p>
+                </div>
+                <div class="d1 flex">
+                    <img src="check-mark.png" alt="">
+                    <p>Lorem ipsum dolor sit amet. lorem hfbv wbnfjkb jsif</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-5">
+        <div class="container flex section-5-con">
+
+            <div class="section-5-content flex">
+                <h1>Optimize Workflow</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quam labore officiis! Incidunt, quam
+                    atque.</p>
+            </div>
+            <div class="section-5-image">
+                <img src="asset 3.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="section-6">
+        <div class="container">
+            <div class="section-6-heading">
+                <h1>Over a million companies trust us</h1>
+            </div>
+            <div class="section-6-content flex">
+                <div class="div-img flex"> <img src="asset 4.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 5.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 6.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 7.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 5.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 6.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 7.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 8.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 5.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 6.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 7.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 5.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 6.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 7.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 8.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 5.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 6.png" alt=""></div>
+                <div class="div-img flex"> <img src="asset 7.png" alt=""></div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <section class="section-7">
+        <div class="container flex section-7-he">
+            <div class="section-7-content flex">
+                <h1>Testimonials</h1>
+                <p class="p3">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore esse corrupti fugiat
+                    alias, suscipit voluptate. Facere saepe eligendi delectus animi sapiente magnam blanditiis vitae
+                    molestiae assumenda, debitis ducimus vero dolorem."</p>
+                <div class="d2">
+                    <p class="p1">Tania W. Holland</p>
+                    <p class="p2">Client</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-8">
+        <div class="container flex section-8-con">
+            <div class="section-8-img">
+                <img src="asset 9.jpeg" alt="">
+            </div>
+            <div class="section-8-content flex">
+                <h2>Increase Productivity</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem recusandae nulla magnam
+                    reprehenderit aliquam qui </p>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, dolore aut reiciendis odio eum harum
+                </p>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, dolore aut reiciendis odio eum harum
+                </p>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, dolore aut reiciendis odio eum harum
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section-9">
+        <div class="container">
+            <div class="section-9-heading">
+                <h1>FAQs</h1>
+            </div>
+            <div class="accordian">
+                <div class="question flex">
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
+                    <i class=" icon  fa-solid fa-plus"></i>
+                </div>
+                <div class="answer ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nostrum necessitatibus at molestias, ut praesentium fugit iste incidunt perspiciatis animi facilis, dolorem corrupti? Dolor  </p>
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question flex">
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
+                    <i class=" icon  fa-solid fa-plus"></i>
+                </div>
+                <div class="answer ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nostrum necessitatibus at molestias, ut praesentium fugit iste incidunt perspiciatis animi facilis, dolorem corrupti? Dolor  </p>
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question flex">
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
+                    <i class=" icon  fa-solid fa-plus"></i>
+                </div>
+                <div class="answer ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nostrum necessitatibus at molestias, ut praesentium fugit iste incidunt perspiciatis animi facilis, dolorem corrupti? Dolor  </p>
+                </div>
+            </div>
+            <div class="accordian">
+                <div class="question flex">
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
+                    <i class=" icon  fa-solid fa-plus"></i>
+                </div>
+                <div class="answer ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nostrum necessitatibus at molestias, ut praesentium fugit iste incidunt perspiciatis animi facilis, dolorem corrupti? Dolor  </p>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+    <footer class="footer-1">
+        <div class="container flex footer-content">
+            <div class="footer-cards flex">
+                <div class="footer-cards-1">
+                    <h3>INFO</h3>
+                </div>
+                <div class="footer-cards-2">
+                    <p>Home Features</p>
+                    <p>Pricing</p>
+                    <p>Company</p>
+                    <p>Contacts</p>
+                    <p>Services</p>
+                </div>
+            </div>
+            <div class="footer-cards flex">
+                <div class="footer-cards-1">
+                    <h3>SERVICES</h3>
+                </div>
+                <div class="footer-cards-2">
+                    <p>Home Features</p>
+                    <p>Pricing</p>
+                    <p>Company</p>
+                    <p>Contacts</p>
+                    <p>Services</p>
+                </div>
+            </div>
+            <div class="footer-cards flex">
+                <div class="footer-cards-1">
+                    <h3>FEATURES</h3>
+                </div>
+                <div class="footer-cards-2">
+                    <p>Home Features</p>
+                    <p>Pricing</p>
+                    <p>Company</p>
+                    <p>Contacts</p>
+                    <p>Services</p>
+                </div>
+            </div>
+            <div class="footer-cards flex">
+                <div class="footer-cards-1">
+                    <h3>PRICING</h3>
+                </div>
+                <div class="footer-cards-2">
+                    <p>Home Features</p>
+                    <p>Pricing</p>
+                    <p>Company</p>
+                    <p>Contacts</p>
+                    <p>Services</p>
+                </div>
+            </div>
+            <div class="footer-cards flex">
+                <div class="footer-cards-1">
+                    <h3>CONTACTS</h3>
+                </div>
+                <div class="footer-cards-2">
+                    <p>Home Features</p>
+                    <p>Pricing</p>
+                    <p>Company</p>
+                    <p>Contacts</p>
+                    <p>Services</p>
+                </div>
+            </div>
+            <div class="footer-cards flex">
+                <div class="footer-cards-1">
+                    <h3>COMPANY</h3>
+                </div>
+                <div class="footer-cards-2">
+                    <p>Home Features</p>
+                    <p>Pricing</p>
+                    <p>Company</p>
+                    <p>Contacts</p>
+                    <p>Services</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="subfooter">
+        <div class="container flex subfooter-content">
+            <div class="footer-div-1 flex">
+                <img src="twitter.png" alt="">
+                <img src="facebook.png" alt="">
+                <img src="youtube.png" alt="">
+                <img src="instagram.png" alt="">
+            </div>
+            <div class="footer-div-2 flex">
+                <a href="" class="links">Home</a>
+                <a href="" class="links">Services</a>
+                <a href="" class="links">About</a>
+            </div>
+            <div class="footer-div-3">
+                <p>@Copyright 2030 Morbirise.All Right Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const ham = document.getElementById('nav-toggle');
+        toggleButton.addEventListener('click', () => {
+            ham.classList.toggle('active1');
+        })
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
+    <script>
+        const accordians = document.querySelectorAll('.accordian');
+        accordians.forEach((accordian) =>{
+            const icon = accordian.querySelector('.icon');
+            const answer = accordian.querySelector('.answer');  
+            accordian.addEventListener('click',() => {
+              if(icon.classList.contains('active')){
+                icon.classList.remove('active');
+                     answer.style.maxHeight = null;
+              }else{
+                icon.classList.add('active');
+                     answer.style.maxHeight = answer.scrollHeight + 'px';
+              }
+            })
+        })
+    </script>
+</body>
+
+</html>

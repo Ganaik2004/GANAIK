@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .flex {
+            /* align-items: center; */
+            display: flex;
+        }
+
+        .container {
+            height: 100vh;
+            background-image: url(6153772.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: inherit;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 560px;
+            width:350px;
+            padding: 40px 35px ;
+            position: relative;
+            background-color:#8fe8a290 ;
+            backdrop-filter: blur(5px);
+            border-radius: 30px;
+            border: 2px solid #5dc976;
+            overflow: hidden;
+        }
+        #login{
+            position: absolute;
+            width: 80%;
+            left: 27px;
+            transition: .5s ease-in-out;
+        }
+        #register{
+            position: absolute;
+            transition: .5s ease-in-out;
+            right: -350px;
+            width: 80%;
+        }
+        .heading{
+            margin-block: 20px;
+            text-align: center;
+        }
+        .heading h3{
+             font-size: 2rem;
+             margin-bottom: 5px;
+        }
+        .input-area{
+            position: relative;
+            margin-block: 20px;
+        }
+        .input-area input{
+            width: 100%;
+            height: 50px;
+            border-radius: 16px;
+            border: none;
+            background-color: #d4f8dc99;
+            backdrop-filter: blur(10px);
+            outline: none;
+            font-size: 20px;
+            padding: 7px 45px 0 20px;
+       
+        }
+        .label{
+            position: absolute;
+            top: 16px;
+            left: 20px;
+            transition: .3s ease-in-out;
+        }
+        .logem:focus~label,.logem:valid~label{
+        top: 3px;
+        font-size: 10px;
+        color: #c12828;
+        font-weight: 500;
+    }
+    .eye-box{
+        position: absolute;
+        top: 16px;
+        right: 40px;
+        display: flex;
+    }
+    i{
+        position: absolute;
+        color: #014f12;
+    }
+    #eye,#eye-2{
+        opacity: 1;
+    }
+    #eye-slash,#eye-slash-2{
+        opacity: 0;
+    }
+    .cheak{
+        width: 5%;
+     margin-inline: 10px;
+    }
+    
+    .submit{
+        margin-block: 20px;
+        background-color: #03811c;
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-radius: 15px;
+        color: #fff;
+        font-size: 1.2rem;
+        transition:  .3s ease-in-out;
+    }
+    .submit:hover{
+        background-color: #22a541;
+    }
+    .forgot{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .forgot a{
+        text-decoration: none;
+        color: #014f12;
+    }
+    .switch{
+        position: absolute;
+        bottom: 35px;
+        width: 80%;
+      align-items: center;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.16);
+           backdrop-filter: blur(10px);
+           border-radius: 10px;
+           box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    }
+    .switch a{
+       display: flex;
+     width: 50%;
+     height: 50px;
+     align-items: center;
+     justify-content: center;
+     text-decoration: none;
+     font-size: 1rem;
+     color: #fff;
+    }
+    #btn{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 50%;
+        height: 50px;
+        background-color: #014f1289;
+        border-radius: 10px;
+        box-shadow: 2px 0px 12px rgba(0,0,0,0.1);
+        transition: .5s ease-in-out;
+        z-index: -1;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container flex">
+        <div class="box flex">
+            <div id="login">
+                <div class="heading">
+                    <h3>Welcome</h3>
+                    <small>It take 30s</small>
+                </div>
+                <div class="group">
+                    <div class="input-area">
+                        <input type="email" id="logemail" class="logem" required>
+                        <label for="logemail" class="label">Email address</label>
+                    </div>
+                    <div class="input-area">
+                        <input type="password" id="logpassward" class="logem" required>
+                        <label for="logpassward" class="label">Password</label>
+                        <div class="eye-box " onclick="myLogpassward()">
+                            <i class="fa-regular fa-eye" id="eye"></i>
+                            <i class="fa-regular fa-eye-slash"  id="eye-slash"></i>
+                        </div>
+                    </div>
+                    <div class="remember flex">
+                        <input type="checkbox" id="cheak" class="cheak" required>
+                        <label for="cheak">Remember me</label>
+                    </div>
+                </div>
+                <div class="input-are">
+                    <input type="submit" class="submit" value="Login">
+                </div>
+                <div class="forgot">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </div>
+<!-- register -->
+<div id="register">
+    <div class="heading">
+        <h3>Sign Up</h3>
+        <small>It take 30s</small>
+    </div>
+    <div class="group">
+        <div class="input-area">
+            <input type="text" id="reguser" class="logem" required>
+            <label for="reguser" class="label">Username</label>
+        </div>
+        <div class="input-area">
+            <input type="email" id="logemail" class="logem" required>
+            <label for="logemail" class="label">Email address</label>
+        </div>
+        <div class="input-area">
+            <input type="password" id="regpassward" class="logem" required>
+            <label for="regpassward" class="label">Password</label>
+            <div class="eye-box " onclick="myregpassward()">
+                <i class="fa-regular fa-eye" id="eye-2"></i>
+                <i class="fa-regular fa-eye-slash"  id="eye-slash-2"></i>
+            </div>
+        </div>
+        <div class="remember flex">
+            <input type="checkbox" id="cheak" class="cheak" required>
+            <label for="cheak">Remember me</label>
+        </div>
+    </div>
+    <div class="input-are">
+        <input type="submit" class="submit" value="Sign Up">
+    </div>
+    
+</div>
+<div class="switch flex">
+    <a href="#" class="login" onclick="login()">Login</a>
+    <a href="#" class="register" onclick="register()">Sign Up</a>
+    <div class="btn-active" id="btn"></div>
+</div>
+        </div>
+      
+    </div>
+    <script src="https://kit.fontawesome.com/659a986349.js" crossorigin="anonymous"></script>
+    <script>
+         var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+        function login(){
+            x.style.left="35px";
+            y.style.right="-350px";
+            z.style.left="0px";
+
+        }
+        function register(){
+            x.style.left="-350px";
+            y.style.right="35px";
+            z.style.left="138.5px";
+
+        }
+        function myregpassward(){
+            var a = document.getElementById("regpassward");
+            var b = document.getElementById("eye-2");
+            var c = document.getElementById("eye-slash-2");
+
+            if(a.type==="password"){
+                a.type = "text";
+                b.style.opacity = "0";
+                c.style.opacity = "1";
+            }else{
+                a.type = "password";
+                b.style.opacity = "1";
+                c.style.opacity = "0";
+            }
+        }
+        function myLogpassward(){
+            var a = document.getElementById("logpassward");
+            var b = document.getElementById("eye");
+            var c = document.getElementById("eye-slash");
+
+            if(a.type==="password"){
+                a.type = "text";
+                b.style.opacity = "0";
+                c.style.opacity = "1";
+            }else{
+                a.type = "password";
+                b.style.opacity = "1";
+                c.style.opacity = "0";
+            }
+        }
+    </script>
+</body>
+
+</html>
