@@ -60,16 +60,20 @@ const header = document.querySelector("nav");
 const scr1 = document.querySelector(".scroll-btn");
 window.addEventListener("scroll", function () {
     header.classList.toggle("sticky", window.scrollY > 200)
-    scr1.classList.toggle("opa", window.scrollY > 2200)
+    scr1.classList.toggle("opa", window.scrollY > 1200)
 });
 // Eight
-// let scr11 = window.pageYOffset;  
-// window.onscroll = function(){
-//     let scr22 = window.pageYOffset;
-//     if(scr11>scr22){
-//     document.querySelector("nav").style.display = "block";
-//     }else{
-//         document.querySelector("nav").style.display = "none";
-//     }
-//     scr11=scr22;
-// }
+const accordians = document.querySelectorAll('.accordian');
+accordians.forEach((accordian) =>{
+    const icon = accordian.querySelector('.icon');
+    const answer = accordian.querySelector('.container1');  
+    accordian.addEventListener('click',() => {
+      if(icon.classList.contains('active')){
+        icon.classList.remove('active');
+             answer.style.maxHeight = null;
+      }else{
+        icon.classList.add('active');
+             answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+});
