@@ -483,13 +483,6 @@ span {
     text-align: center;
 }
 
-/* .container1 {
-    position: relative;
- 
-    width: 100%;
-  
-    border-radius: 7px;
-} */
 
 .title {
     display: block;
@@ -701,7 +694,7 @@ textarea {
 
 /* Footer */
 .end-section {
-    padding: 40px 19% 30px;
+    padding: 40px 10% 30px;
     background-color: var(--bg-2);
     flex-direction: column;
     gap: 20px;
@@ -967,14 +960,43 @@ textarea {
 @media screen and (max-width :440px) {
 .container{
     padding-inline: 20px;
+    padding-block: 10px;
+}
+nav .logo h1{
+    font-size: 1.5rem;
+}
+.search-box{
+    height: 30px;
+    width: 30px;
+}
+.search-box i{
+    line-height: 30px;
+}
+.dark-light-mode {
+  
+    width: 30px;
+    height: 30px;
+}
+.dark-light-mode i{
+    line-height: 30px;
+}
+.menu-bar{
+    width: 30px;
+    height: 30px;
+}
+.menu-bar i{
+    font-size: 30px;
+}
+.advance{
+    gap: 10px;
 }
     .input-box {
         height: 45px;
         background-color: var(--main-color);
         position: absolute;
-        top: 10px;
+        top:5px !important;
         left: 10px;
-        right: 165px;
+        right: 144px;
         border-radius: 7px;
         opacity: 0;
         pointer-events: none;
