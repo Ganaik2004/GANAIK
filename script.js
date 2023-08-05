@@ -60,7 +60,7 @@ const header = document.querySelector("nav");
 const scr1 = document.querySelector(".scroll-btn");
 window.addEventListener("scroll", function () {
     header.classList.toggle("sticky", window.scrollY > 200)
-    scr1.classList.toggle("opa", window.scrollY > 1200)
+    scr1.classList.toggle("opa", window.scrollY > 700)
 });
 // Eight
 const accordians = document.querySelectorAll('.accordian');
