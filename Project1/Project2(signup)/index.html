@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            color: #577D86;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        a{
+            text-decoration: none;
+            display: inline-block;
+        }
+        .container{
+            max-width: 1180px;
+            margin-inline: auto;
+            padding-inline: 20px;
+            height: 100vh;
+        }
+        .flex{
+            display: flex;
+            align-items: center;
+        }
+        h1{
+            font-size: 2.3rem;
+        }
+        label{
+          font-size: 1rem;
+        }
+input{
+    margin-top: 5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #cccc;
+}
+form p{
+    margin-top: 12px;
+}
+
+       .ssd{
+        justify-content: space-around;
+        gap: 20px;
+       }
+.ass{
+    display: block;
+    width: 100%;
+}
+        .start-heading{
+         font-size: 0.7rem;
+        }
+        .company-image{
+            max-width: 590px;
+              
+        }
+        .image{
+           width: 100%;
+        }
+        .container-content{
+           flex-basis: 400px;
+        }
+        .dfg{
+            justify-content: space-between;
+        }
+        .link{
+            font-size: 0.8rem;
+            transition: 0.2s ease-out;
+        }
+        .link:hover{
+            color: #87CBB9;
+        }
+        .primary{
+            padding: 10px;
+            background-color: #577D86;
+            border: none;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: 0.3s ease-out;
+        }
+        .primary:hover{
+            background-color: #87CBB9;
+        }
+        .qwe{
+            margin-top: 15px;
+            justify-content: space-between;
+        }
+        .small{
+            font-size: 0.8rem;
+        }
+        .first{
+            width: 140px;           
+            border-bottom: 1px solid #577D86;
+        }
+        .logo{
+            width: 20px;
+        }
+        footer{
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+        .google{
+           gap: 10px;
+        }
+        @media (max-width:970px){
+            .ssd{
+                flex-direction: column;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="signuppage">
+
+
+        <div class="container flex ssd">
+
+
+            <div class="container-content">
+                <h1>Welcome Back</h1>
+                <p class="start-heading">It just take 30sec</p>
+
+
+
+
+                <form action="#">
+                    <p>  <label for="Email">Email Address</label>
+                        <input class="ass" type="email" id="Email" placeholder="ganaikdeshmukh@gmail.com" required></p>
+                  
+                     <p>
+                      <div class="dfg flex">
+                        <label for="Passward">Passward</label>
+                        <a class="link" href="#">Forget Passward?</a>
+                      </div>
+                       
+
+                        <input class="ass" type="password" placeholder="At least 8 char" required></p>
+                    
+                     <p><input type="checkbox" id="cheakbox">
+                        <label for="cheakbox">Remember me</label></p>
+                   <p><input class="ass primary" type="submit"  value="Login"></p>
+                </form>
+
+
+
+
+
+
+
+
+     <section class="flex qwe">
+        <div class="first"></div>
+        <p class="small">or login with</p>
+        <div class="first"></div>
+     </section>
+     <footer class="flex ">
+        <div class="google flex">
+            <img class="logo" src="pngwing.com.png" alt="">
+            <a class="link" href="#">Google</a>
+        </div>
+        <div class="google flex">
+            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/732px-Apple_logo_black.svg.png?20220821121934" alt="">
+            <a class="link" href="#">Mac</a>
+        </div>
+        <div class="google flex">
+           <img src="WhatsApp Image 2023-06-25 at 15.18.26.jpg" alt="" class="logo">
+           <a class="link" href="#">Facebook</a>
+        </div>
+     </footer>
+
+
+
+
+
+
+
+            </div>
+
+            <div  class="company-image">
+                <img class="image" src="WhatsApp Image 2023-06-25 at 13.46.33.jpg" alt="" >
+            </div>
+        </div>
+    </div>
+</body>
+</html>

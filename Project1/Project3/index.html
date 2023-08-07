@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+                 margin: 0px;
+                 padding: 0px;
+                 box-sizing: border-box;
+                 font-family: 'Poppins', sans-serif;
+                 outline: none;
+        }
+        h1{
+            font-size: 2.2rem;
+            color: #F97B22;
+            text-align: center;
+        }
+        .flex{
+            display: flex;
+            align-items: center;
+        }
+        .container{
+            height: 100vh;
+            max-width: 1150px;
+            margin-inline: auto;
+            padding-inline: 20px;
+        }
+    .contact{
+        width: 100%;
+       height: 110px;
+        resize: none;
+        border-radius: 14px;
+        padding: 6px 12px;
+        border: 1px solid #1F8A70;
+        color: #F97B22;
+      font-size: 1rem;
+    }
+   
+.image{
+    max-width: 690px;
+}
+    .logo{
+        width: 100%;
+    }
+    .qwer{
+        justify-content: space-around;
+        gap: 40px;
+    }
+    .details{
+     flex-basis: 300px;
+    }
+    p{
+        margin-top: 18px;
+    }
+    .sub{
+        width: 100%;
+        border-radius: 14px;
+        padding: 6px 12px;
+        border: 1px solid #1F8A70;
+      color: #F97B22;
+      font-size: 1rem;
+    }
+    .primary{
+      color: #F97B22;
+      padding: 6px 17px;
+      border-radius: 17px;
+      background-color: white;
+      border: 1px solid #1F8A70;
+      font-size: 1.1rem;
+      font-weight: 200;
+      transition: 0.2s ease-out;
+    }
+    .primary:hover{
+        background-color: #F97B22;
+        color: white;
+        border: none;
+    }
+    .asd{
+        text-align: center;
+    }
+    @media(max-width:950px){
+       .qwer{
+        flex-direction: column;
+        height: 100%;
+       }
+    }
+    </style>
+</head>
+<body>
+    <div class="contact-us">
+        <div class="container flex qwer">
+
+                <div class="details">
+                   <h1>CONTACT US</h1>
+                   <form action="#">
+                    <p>
+                        <input class="sub" type="text" placeholder="Name" required>
+                    </p>
+                    <p>
+                        <input class="sub" type="email" placeholder="Email" required>
+                    </p>
+                    <p>
+                        <textarea class="contact" placeholder="Message" required></textarea>
+                    </p>
+                    <p  class="asd">
+                        <input class="primary" type="submit" value="SEND">
+                    </p>
+                   </form>
+                </div>
+
+
+                <div class="image">
+                    <img class="logo" src="8401.jpg" alt="" >
+                </div>
+
+        </div>
+    </div>
+</body>
+</html>
