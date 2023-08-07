@@ -602,11 +602,11 @@ span {
     padding: 5px;
     line-height: 1.5;
     font-size: 1.2rem;
-    color:var(--color);
+    color:var(--main-color);
 }
 .icon{
     font-size: 20px;
-    color: var(--color);
+    color: var(--main-color);
     transition: transform .2s ease-in;
   
 }
