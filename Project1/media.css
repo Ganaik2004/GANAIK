@@ -4,7 +4,10 @@
     }
     .nav-toggle{
         display: block;
-        margin-right: 20px;
+        margin-right: 25px;
+    }
+    .nav-toggle i{
+        font-size: 30px;
     }
     .main-nav{
         overflow: initial;
