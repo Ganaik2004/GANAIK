@@ -39,8 +39,10 @@ window.onscroll = () => {
 }
 // Fifth
 var typed = new Typed('#element', {
-    strings: ['Web Developer.', 'Web Designer.', 'Problem solver.', 'Web Developer.'],
-    typeSpeed: 100,
+    strings: ['Web Developer.', 'Web Designer.', 'Problem solver.'],
+    typeSpeed: 150,
+    backdelay:4000,
+    loop:true,
 });
 // Sixth
 let tabLinks = document.getElementsByClassName("tab-links");

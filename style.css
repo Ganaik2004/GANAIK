@@ -12,7 +12,7 @@
     --bg-color: #080808;
     --bg-2: #262626;
     --color: #fff;
-    --main-color: #ff004f;
+    --main-color:rgb(36, 203, 215);
     --color-2: #c8c8c8;
     --h1-font: 2.5rem;
     --p-font: .9rem;
@@ -27,7 +27,7 @@ body {
 body.dark {
     --bg-color: #fff;
     --color: #080808;
-    --main-color: #ff004f;
+    --main-color: rgb(36, 203, 215);
     --color-2: #616161;
     --bg-2: #f6f6f6;
 }
