@@ -87,6 +87,6 @@ ScrollReveal({
     delay:200,
 })
 ScrollReveal().reveal('.sub-title,.about-col-2>h1,.sub-titl',{origin:'top'});
-ScrollReveal().reveal('.contact-right,.about-col-2>p,.tab-titles,.content-collection,.acc2',{origin:'right'});
-ScrollReveal().reveal('.header-text,.about-col-1>img,.contact-left,.acc1',{origin:'left'});
-ScrollReveal().reveal('.swiper-slide,.services-list',{origin:'bottom'});
+// ScrollReveal().reveal('.contact-right,.about-col-2>p,.tab-titles,.content-collection,.acc2',{origin:'right'});
+// ScrollReveal().reveal('.header-text,.about-col-1>img,.contact-left,.acc1',{origin:'left'});
+// ScrollReveal().reveal('.swiper-slide,.services-list',{origin:'bottom'});
