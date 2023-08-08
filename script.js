@@ -79,3 +79,14 @@ accordians.forEach((accordian) =>{
       }
     });
 });
+// nine
+ScrollReveal({
+    // reset:true,
+    distance:'100px',
+    duration:1000,
+    delay:100,
+})
+ScrollReveal().reveal('.sub-title,.about-col-2>h1,.sub-titl,',{origin:'top'});
+ScrollReveal().reveal('.contact-right,.about-col-2>p,.tab-titles,.content-collection,.acc2,.end-section>p,.navbar',{origin:'right'});
+ScrollReveal().reveal('.header-text,.about-col-1>img,.contact-left,.acc1,.end-section>h2,.end-icon',{origin:'left'});
+ScrollReveal().reveal('.swiper-slide,.services-list,footer',{origin:'bottom'});
