@@ -29,7 +29,13 @@
             min-height: 100vh;
             align-items: center;
            justify-content: center;
+           overflow-x: hidden;
           
+         }
+         .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
          }
          body.dark{
             --primary-color:#242526;
@@ -114,6 +120,39 @@
             background-color: var(--black-color);
             cursor: pointer;
             box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+         }
+         @media screen and (max-width:500px) {
+            .container .clock{
+            display: flex;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--white-color);
+            box-shadow:0 15px 25px rgba(0,0,0,0.1) ;
+            position: relative;
+         }
+         .hand{
+            position: absolute;
+            height: 90px;
+            width: 4px;
+            bottom: 0;
+            transform-origin: bottom;
+            border-radius: 25px;
+            background-color: var(--red-color);
+         }
+         .hand.min{
+            height: 80px;
+           width: 5px;
+          
+            background-color: var(--black-color);
+         }
+         .hand.hour{
+            height: 60px;
+           width: 8px;
+            background-color: var(--black-color);
+         }
          }
     </style>
 </head>
