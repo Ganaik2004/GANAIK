@@ -54,7 +54,10 @@ function opentab(tabname) {
     for (tabcon of tabContent) {
         tabcon.classList.remove("active-tab");
     }
-    event.currentTarget.classList.add("active-link");
+    let collectLink = document.querySelector(".tab-titles");
+    collectLink.addEventListener("click",(e)=>{
+        e.target.classList.add("active-link")
+    })
     document.getElementById(tabname).classList.add("active-tab");
 }
 // Seven
