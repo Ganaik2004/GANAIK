@@ -17,19 +17,24 @@
     <!-- Css Link -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- <div class="option flex">
-<div class="more">
-    <div class="darkmode ">
-        <i class='bx bxs-sun'></i>
+    <div class="option flex">
+        <div class="more">
+            <div class="darkmode ">
+                <i class='bx bxs-sun'></i>
+            </div>
+        </div>
+        <i class='bx bx-dots-horizontal-rounded'></i>
     </div>
-</div>
-<i class='bx bx-dots-horizontal-rounded'></i>
- </div>
     <nav>
         <div class="container flex navbar">
-            <div class="logo"><a href="#"><h1>GANAIK</h1></a></div>
-            <div class="logo2"><h1>GD</h1></div>
+            <div class="logo"><a href="#">
+                    <h1>GANAIK</h1>
+                </a></div>
+            <div class="logo2">
+                <h1>GD</h1>
+            </div>
             <ul class="nav-links flex">
                 <li class="links" id="ipl" onclick="onnavitemclick('ipl')">IPL</li>
                 <li class="links" id="finance" onclick="onnavitemclick('finance')">FINANCE</li>
@@ -39,15 +44,15 @@
                 <input type="text" placeholder="Search..." class="news-input">
                 <i class='bx bx-search'></i>
             </div>
-         
+
             <i class='bx bx-menu'></i>
-        
+
         </div>
     </nav>
     <main>
         <div class="container card-container flex">
-           
-             
+
+
         </div>
     </main>
     <template id="template-news-card">
@@ -58,10 +63,12 @@
             <div class="card-content">
                 <h3 id="new-title">THIS IS THE TITLE</h3>
                 <h6 id="news-source">End gahjhfd hjkh</h6>
-                <p id="new-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, modi eos eum quisquam rerum voluptate quae distinctio ducimus porro placeat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, ipsum!</p>
+                <p id="new-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, modi eos eum
+                    quisquam rerum voluptate quae distinctio ducimus porro placeat. Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Nemo, ipsum!</p>
             </div>
-           </div>
+        </div>
     </template>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
