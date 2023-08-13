@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google Font Link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Link -->
+    <script src="https://kit.fontawesome.com/659a986349.js" crossorigin="anonymous"></script>
+    <!-- Box Icon LInk -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Css Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="option flex">
+<div class="more">
+    <div class="darkmode ">
+        <i class='bx bxs-sun'></i>
+    </div>
+</div>
+<i class='bx bx-dots-horizontal-rounded'></i>
+ </div>
+    <nav>
+        <div class="container flex navbar">
+            <div class="logo"><a href="#"><h1>GANAIK</h1></a></div>
+            <div class="logo2"><h1>GD</h1></div>
+            <ul class="nav-links flex">
+                <li class="links" id="ipl" onclick="onnavitemclick('ipl')">IPL</li>
+                <li class="links" id="finance" onclick="onnavitemclick('finance')">FINANCE</li>
+                <li class="links" id="political" onclick="onnavitemclick('political')">POLITICAL</li>
+            </ul>
+            <div class="search-bar flex">
+                <input type="text" placeholder="Search..." class="news-input">
+                <i class='bx bx-search'></i>
+            </div>
+         
+            <i class='bx bx-menu'></i>
+        
+        </div>
+    </nav>
+    <main>
+        <div class="container card-container flex">
+           
+             
+        </div>
+    </main>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="" id="image">
+            </div>
+            <div class="card-content">
+                <h3 id="new-title">THIS IS THE TITLE</h3>
+                <h6 id="news-source">End gahjhfd hjkh</h6>
+                <p id="new-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, modi eos eum quisquam rerum voluptate quae distinctio ducimus porro placeat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, ipsum!</p>
+            </div>
+           </div>
+    </template>
+<script src="script.js"></script>
+</body>
+</html>
