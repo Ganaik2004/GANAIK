@@ -1,0 +1,122 @@
+*{
+    margin:0px ;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --bg-color: #080808;
+    --bg-2: #262626;
+    --color: #fff;
+    --main-color: rgb(36, 203, 215);
+    --color-2: #c8c8c8;
+    --h1-font: 2.5rem;
+    --p-font: .9rem;
+}
+
+body {
+    background-color: var(--color);
+    overflow-x: hidden;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+body.dark {
+    --bg-color: #fff;
+    --color: #080808;
+    --main-color: rgb(36, 203, 215);
+    --color-2: #616161;
+    --bg-2: #f6f6f6;
+}
+
+.container{
+    max-width: 1150px;
+    margin-inline: auto;
+    padding-inline:20px;
+}
+a{
+    text-decoration: none;
+    color: #5a5a5a      ;
+}
+ul{
+    list-style: none;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+/* BOARD */
+.wrapper{
+    height: 93vmin;
+    width: 90vmin;
+    overflow: hidden;
+    background-color:var(--bg-color);
+    flex-direction: column;
+}
+.game_details{
+    color: var(--color);
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px;
+    justify-content: space-between;
+    border-bottom: 1.7px solid var(--color);
+}
+.play_board{
+    width: 100%;
+    height: 100%;
+    background-color:var(--bg-color);
+    display: grid;
+    grid-template: repeat(30,1fr)/repeat(30,1fr);
+}
+.food{
+    background-color: red; 
+    border-radius: 50%;
+}
+.head{
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+.controls{
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--color);
+    border-top: 1.7px solid var(--color);
+}
+.controls i{
+    padding: 20px 0;
+    color: var(--color);
+    flex-basis: calc(97%/4);
+    text-align: center;
+    font-size: 30px;
+    background-color: var(--bg-color);
+}
+.dark-light-mode {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+}
+
+.dark-light-mode i {
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 28px;
+    color: var(--bg-color);
+}
+
+@media screen and (max-width:700px) {
+    .wrapper{
+        width: 90vmin;
+        height: 115vmin;
+    }
+    .controls{
+        display: flex;
+    }
+    
+}
