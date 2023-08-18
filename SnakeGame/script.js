@@ -23,6 +23,7 @@ const changeFoodPOsition=()=>{
     foodY=Math.floor(Math.random()*30)+1;
 }
 function handlegameover(){
+    gamestart.pause();
     gameover12.play();
     clearInterval(setintervalid);
     alert("game over! Press enter to Start");
