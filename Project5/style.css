@@ -7,19 +7,19 @@
    font-family: 'Roboto', sans-serif;
 }
 body{
-    height: 100vh;
+    height: 100%;
    background-color: #222;
    overflow-x: hidden;
    display: flex;
    align-items: center;
    justify-content: center;
-  
+   margin-top: 40px;
 }
 /* CARD */
 .card{
     /* width: 90%; */
    flex-basis: 450px;
-    background: linear-gradient(135deg,#00feda,#5b548a);
+    background-color:rgb(36, 203, 215);
     color: #fff;
     border-radius: 20px;
     padding: 40px 35px;
@@ -76,11 +76,20 @@ font-size: 40px;
     align-items: center;
     text-align: left;
 }
+.col1{
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+}
+.col1 img{
+    width: 40px;
+    margin-right: 10px;
+}
 .col img{
     width: 40px;
     margin-right: 10px;
 }
-.humidity,.wind{
+.humidity,.wind,.visibility,.hot,.gauge{
     font-size: 28px;
     margin-top: -6px;
 }
@@ -108,7 +117,7 @@ font-size: 40px;
     .col img{
         width: 30px;
     }
-    .humidity,.wind{
+    .humidity,.wind,.visibility,.hot,.gauge{
         font-size: 18px;
     }
     .weather-icon{
