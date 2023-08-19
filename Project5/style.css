@@ -114,6 +114,9 @@ font-size: 40px;
     .details{
         padding: 0px 10px;
     }
+    .col1 img{
+        width: 30px;
+    }
     .col img{
         width: 30px;
     }
