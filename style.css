@@ -60,7 +60,29 @@ nav.sticky {
     background-color: var(--bg-color);
     z-index: 100;
 }
-
+.contact1111{
+    gap: 10px;
+    background-color: transparent;
+    border: 1.7px solid var(--main-color);
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: .3s all ease;
+    color: var(--main-color);
+}
+.contact1111 span{
+    font-size: 18px;
+}
+.contact1111 i{
+   font-size: 20px;
+}
+.contact1111:hover{
+    transform: translateX(10px);
+    color: var(--color);
+    background-color: var(--main-color);
+}
+.contact1111:hover span{
+    color: var(--color);
+}
 /* NAVBAR */
 nav {
     position: fixed;
@@ -692,7 +714,11 @@ textarea {
     padding: 20px;
     text-align: end;
 }
-
+.msg{
+    color: #61b752;
+    margin-top: 20px;
+    display: block;
+}
 /* Footer */
 .end-section {
     padding: 40px 10% 30px;
