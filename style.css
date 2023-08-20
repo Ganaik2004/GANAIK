@@ -718,6 +718,12 @@ textarea {
     color: #61b752;
     margin-top: 20px;
     display: block;
+    padding: 10px 10px;
+}
+.msg12{
+    border: 1.7px solid #61b752;
+    border-radius: 10px;
+    background-color: #61b7522b;
 }
 /* Footer */
 .end-section {

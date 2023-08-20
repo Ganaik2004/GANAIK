@@ -91,9 +91,11 @@ const msg = document.querySelector(".msg");
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
-        msg.innerHTML="Message Send Sucessful";
+        msg.innerHTML="Message Send Sucessfully";
+        msg.classList.add("msg12")
         setTimeout(function(){
             msg.innerHTML="";
+            msg.classList.remove("msg12")
         },5000)
         form.reset();
       })
