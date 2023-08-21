@@ -803,7 +803,18 @@ textarea {
 .opa {
     opacity: 1;
 }
-
+/* Special _fartures */
+.special_features{
+    position: fixed;
+   bottom: 60px;
+   right: 1.2rem;
+  width: 30px;
+  justify-content: center;
+}
+.special_features i{
+    font-size: 28px;
+    color: var(--main-color);
+}
 @media screen and (max-width:925px) {
     nav {
         z-index: 100;
