@@ -804,16 +804,42 @@ textarea {
     opacity: 1;
 }
 /* Special _fartures */
-.special_features{
+.option{
+    flex-direction: column;
     position: fixed;
-   bottom: 60px;
-   right: 1.2rem;
-  width: 30px;
-  justify-content: center;
+    bottom: 100px;
+    right: 1.1rem;
+    justify-content: center;
+    width: 35px;
+    background-color: var(--bg-2);
+    border-radius: 5px;
+    height: 0;
+    overflow: hidden;
+    transition: .3s ease;
 }
-.special_features i{
-    font-size: 28px;
+.option i{
+    font-size: 25px;
+    padding-block: 10px;
     color: var(--main-color);
+}
+.fa-caret-up{
+    position: fixed;
+    font-size: 28px;
+    bottom: 60px;
+    right: 1.1rem;
+    padding: 2px 8px 2px 8px;
+    color: var(--main-color);
+    transition: .3s ease;
+    border-radius: 10px;
+}
+.fa-caret-up:hover{
+    background-color: var(--bg-2);
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.hert{
+    height: 90px;
 }
 @media screen and (max-width:925px) {
     nav {

@@ -101,3 +101,10 @@ const msg = document.querySelector(".msg");
       })
       .catch(error => console.error('Error!', error.message))
   })
+// ten
+const asdfg = document.querySelector(".fa-caret-up");
+const qwert = document.querySelector(".option")
+asdfg.addEventListener("click",()=>{
+    asdfg.classList.toggle("rotate")
+    qwert.classList.toggle("hert")
+})
