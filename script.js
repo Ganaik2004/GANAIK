@@ -1,3 +1,5 @@
+
+
 // First
 let navbar = document.querySelector(".navbar");
 let search = document.querySelector(".bx-search");
@@ -108,3 +110,8 @@ asdfg.addEventListener("click",()=>{
     asdfg.classList.toggle("rotate")
     qwert.classList.toggle("hert")
 })
+// ELEVEN
+const loader = document.querySelector(".preloder");
+   setTimeout(()=>{
+    loader.classList.add("loderclasss")
+   },5000)
