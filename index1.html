@@ -244,9 +244,8 @@ color: var(--main-color);
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
          var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 50,
-        // slidesPerGroup: 3,
         loop: true,
         centerSlide:'true',
         fade:'true',
@@ -256,6 +255,9 @@ color: var(--main-color);
           clickable: true,
           dynamicBullets:true,
         },
+        autoplay:{
+        delay:2500,
+      },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
