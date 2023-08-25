@@ -229,22 +229,26 @@ i {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(My\ project.png);
-    background-size: cover;
-    background-position: center;
 }
 
 .header-1 {
     width: 100%;
     height: 100%;
+    justify-content: space-between;
 }
 
 .header-text {
     padding: 20px;
-    flex-basis: 57%;
+    flex-basis: 50%;
     font-size: var(--h1-font);
 }
-
+.photo--1{
+    flex-basis: 45%;
+}
+.photo--1 img{
+    width: 100%;
+    border-radius: 30px;
+}
 span {
     color: var(--main-color);
     transition: all ease .3s;
@@ -847,7 +851,7 @@ textarea {
     nav {
         z-index: 100;
     }
-
+    
     .container {
        padding-inline: 50px;
     }
@@ -944,7 +948,7 @@ textarea {
     .links.down {
         left: 0px;
     }
-
+    
     .row {
         flex-direction: column;
         align-items: center;
@@ -957,12 +961,21 @@ textarea {
         width: 100%;
     }
 }
-
+@media screen and (max-width:750px){
+    .header-1 {
+        flex-direction: column-reverse;
+        gap: 50px;
+        justify-content: space-around;
+    }
+     #header{
+        padding-top: 70px;
+     }
+}
 @media screen and (max-width:700px) {
     .container2 {
         max-width: 580px;
     }
-
+    
     .services-cards {
         flex-basis: 100%;
     }
@@ -987,21 +1000,9 @@ textarea {
     }
 
 
-    #header {
-        background-image: url(My\ project\ \(1\).png);
-        background-position: center;
-    }
+    
 
-    .header-text {
-        padding: 100px 0px;
-        flex-basis: 90%;
-        font-size: 1.9rem;
-    }
-
-    .header-1 {
-        align-items: flex-end;
-
-    }
+    
 }
 
 @media screen and (max-width:565px) {
@@ -1041,6 +1042,9 @@ nav .logo h1{
 .search-box{
     height: 30px;
     width: 30px;
+}
+.header-text{
+    font-size: 2.2rem;
 }
 .search-box i{
     line-height: 30px;
