@@ -112,6 +112,7 @@ asdfg.addEventListener("click",()=>{
 })
 // ELEVEN
 const loader = document.querySelector(".preloder");
-   setTimeout(()=>{
-    loader.classList.add("loderclasss")
-   },5000)
+window.addEventListener("load",function(){
+    loader.classList.add("loderclasss");
+})
+
