@@ -113,6 +113,6 @@ asdfg.addEventListener("click",()=>{
 // ELEVEN
 const loader = document.querySelector(".preloder");
 window.addEventListener("load",function(){
-    loader.classList.add("loderclasss");
+    loader.style.display="none";
 })
 
