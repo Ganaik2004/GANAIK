@@ -15,12 +15,25 @@ search.addEventListener('click', () => {
 let darkmode = document.querySelector(".dark-light-mode");
 let body = document.querySelector("body");
 let bright1 = document.querySelector(".bxs-sun");
+let getmode = localStorage.getItem("mode");
+console.log(getmode);
+if(getmode==="dark1"){
+    bright1.classList.replace("bxs-moon", "bxs-sun");
+    body.classList.remove("dark") ;
+   
+}else{
+    bright1.classList.replace("bxs-sun", "bxs-moon");
+   
+    body.classList.add("dark") ;
+}
 darkmode.addEventListener("click", () => {
     body.classList.toggle("dark");
     if (body.classList.contains("dark")) {
         bright1.classList.replace("bxs-sun", "bxs-moon")
+         localStorage.setItem("mode","light");
     } else {
         bright1.classList.replace("bxs-moon", "bxs-sun")
+         localStorage.setItem("mode","dark1");
     }
 });
 // Third
