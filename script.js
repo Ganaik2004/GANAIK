@@ -124,7 +124,7 @@ const  chatbotclosebtn = document.querySelector(".show-chatot");
 const chatbotToggler = document.querySelector(".chat-bot-live");
 const replace____45 = document.querySelector(".bx-message");
 let usermessage;
-const API_KEY = "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";
+const API_KEY = "sk-7xRvMt3BlbkFJEKxOCorBXEYKMmpvdD4P";
 const inputInitHEight = chatInput.scrollHeight;
 const creatChatLi = (message,classname) =>{
     const chatli = document.createElement("li");
