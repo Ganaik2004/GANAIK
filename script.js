@@ -117,12 +117,86 @@ const msg = document.querySelector(".msg");
       .catch(error => console.error('Error!', error.message))
   })
 // ten
-const asdfg = document.querySelector(".fa-caret-up");
-const qwert = document.querySelector(".option")
-asdfg.addEventListener("click",()=>{
-    asdfg.classList.toggle("rotate")
-    qwert.classList.toggle("hert")
+const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.querySelector(".chat-input span");
+const chatbox = document.querySelector(".chatbox");
+const  chatbotclosebtn = document.querySelector(".show-chatot");
+const chatbotToggler = document.querySelector(".chat-bot-live");
+const replace____45 = document.querySelector(".bx-message");
+let usermessage;
+const API_KEY = "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";
+const inputInitHEight = chatInput.scrollHeight;
+const creatChatLi = (message,classname) =>{
+    const chatli = document.createElement("li");
+    chatli.classList.add("chat",classname);
+    let chatContent = classname=== "outgoing" ? `<p></p>` :`<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+    chatli.innerHTML=chatContent;
+    chatli.querySelector("p").textContent = message;
+    return chatli;
+}
+const generateResponse = (incomingChatli)=>{
+    const API_URL = "https://api.openai.com/v1/chat/completions";
+    const messageElement = incomingChatli.querySelector("p");
+    const requestOption = {
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json",
+            "Authorization":`Bearer ${API_KEY}`,
+        },
+        body :JSON.stringify({
+            model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content: usermessage}]
+        })
+    }
+    fetch(API_URL,requestOption).then(res => res.json()).then(data=>{
+        messageElement.textContent = data.choices[0].message.content;
+    }).catch((err)=>{
+        messageElement.classList.add("erroe")
+        messageElement.textContent = "Oops! Something went wrong. Please try again.";
+    }).finally(()=>{
+        chatbox.scrollTo(0,chatbox.scrollHeight);
+    })
+}
+const handlechat = ()=>{
+usermessage = chatInput.value.trim();
+if(!usermessage) return;
+chatInput.value="";
+chatInput.style.height=`${inputInitHEight}px`
+chatbox.appendChild(creatChatLi(usermessage,"outgoing"));
+chatbox.scrollTo(0,chatbox.scrollHeight);
+setTimeout(()=>{
+    const incomingChatli = creatChatLi("Thinking...","incoming");
+    chatbox.appendChild(incomingChatli);
+    chatbox.scrollTo(0,chatbox.scrollHeight);
+    generateResponse(incomingChatli);
+},600)
+}
+chatInput.addEventListener("input",()=>{
+    chatInput.style.height=`${inputInitHEight}px`
+    chatInput.style.height=`${chatInput.scrollHeight}px`
 })
+chatInput.addEventListener("keydown",(e)=>{
+   if(e.key==="Enter" && !e.shiftKey && window.innerWidth>800){
+    e.preventDefault();
+    handlechat();
+   }
+
+})
+chatbotToggler.addEventListener("click",()=>{
+    document.body.classList.toggle("show-chatot");
+    if(document.body.classList.contains("show-chatot")){
+        replace____45.classList.replace("bx-message","bx-x")
+       body.classList.add("ydisable")
+    }else{
+        replace____45.classList.replace("bx-x","bx-message")
+        body.classList.remove("ydisable")
+    }
+})
+
+
+
+
+sendChatBtn.addEventListener("click",handlechat);
 // ELEVEN
 const loader = document.querySelector(".preloder");
 window.addEventListener("load",function(){

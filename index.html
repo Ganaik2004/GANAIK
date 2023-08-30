@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+        <!-- Googlr icon link -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Box icon link -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <!-- FONT AUSOME LINK -->
@@ -18,16 +20,42 @@
 </head>
 
 <body>
+    <!------------------------------- Animated Navbar ------------------------ -->
+    <div class="animated-navbar">
+        <ul class="animation-links flex">
+            <li>
+                <a href="Text to file/index.html"><i class='bx bxs-microphone'></i></a>
+            </li>
+            <li>
+                <a href="ImageSearchEngin/index.html"><i class="fa-solid fa-image"></i></a>
+            </li>
+            <li class="chat-bot-live">
+                <i class='bx bx-message'></i>
+            </li>
+            
+        </ul>
+    </div>
+    <!------------------------------- Background Blur --------------------------->
+    <div class="blur-br-overlay"></div>
     <!------------------------------- PreLoder---------------------------------->
-    <div class="preloder">
-        
+    <div class="preloder"></div>
+    <!--------------------------------- ChAT BOT --------------------------------->
+    <div class="chatbot">
+        <header>
+            <h2>CHATBOT</h2>
+            <!-- <span class="close-btn material-symbols-outlined">close</span> -->
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+               <span class="material-symbols-outlined">smart_toy</span>
+               <p>Hi there 👏 <br> How can I help you today?</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Enter a message..." required></textarea>
+            <span class="material-symbols-outlined">send</span>
+        </div>
     </div>
-    <!-------------------------------secret------------------------------------>
-    <div class="option flex">
-        <a href="Text to file/index.html"><i class="fa-solid fa-microphone"></i></a>
-        <a href="ImageSearchEngin/index.html"><i class="fa-solid fa-image"></i></a>
-    </div>
-    <i class="fa-solid fa-caret-up"></i>
     <!----------------------------------NAVBAR -------------------------------------->
     <nav>
         <div class="container flex navbar">
