@@ -124,7 +124,7 @@ const  chatbotclosebtn = document.querySelector(".show-chatot");
 const chatbotToggler = document.querySelector(".chat-bot-live");
 const replace____45 = document.querySelector(".bx-message");
 let usermessage;
-const API_KEY = "sk-7xRvMt3BlbkFJEKxOCorBXEYKMmpvdD4P";
+const API_KEY = "sk-rLTPOZ25OsIetwblH8n9niRS7ySvp";
 const inputInitHEight = chatInput.scrollHeight;
 const creatChatLi = (message,classname) =>{
     const chatli = document.createElement("li");
@@ -200,6 +200,8 @@ sendChatBtn.addEventListener("click",handlechat);
 // ELEVEN
 const loader = document.querySelector(".preloder");
 window.addEventListener("load",function(){
+   this.setTimeout(()=>{
     loader.style.display="none";
+   },3000);
 })
 

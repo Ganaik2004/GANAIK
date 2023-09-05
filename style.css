@@ -962,13 +962,15 @@ textarea {
     right: 1.2rem;
     bottom: 1.2rem;
     color: var(--color);
+    width: 40px;
     background: var(--main-color);
     padding: 1px;
+    padding-top: 2px;
     border-radius: 6px;
     vertical-align: middle;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items:center;
+    justify-content: end;
     border: 2px solid var(--main-color);
     transform: rotate(90deg);
     opacity: 0;
@@ -977,8 +979,19 @@ textarea {
 
 .scroll-btn i {
     font-size: 25px;
+    animation: arrowup 1s ease-in-out infinite;
 }
-
+@keyframes arrowup{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
 .scroll-btn:hover {
     background-color: transparent;
     color: var(--main-color);
@@ -987,7 +1000,7 @@ textarea {
 .opa {
     opacity: 1;
 }
-/* chatbot */
+
 
 @media screen and (max-width:925px) {
     nav {
@@ -1226,10 +1239,40 @@ nav .logo h1{
 
 }
 .preloder{
-background: #fff url(tenor.gif) no-repeat center center;
-background-size: 8%;
 height: 100vh;
 width: 100%;
+background-color: var(--bg-color);
+display: flex;
+align-items: center;
+justify-content: center;
 position: fixed;
-z-index: 10000;
+top: 0;
+left: 0;
+z-index: 1000000;
+}
+.preloder-logo{
+width: 130px;
+height: 130px;
+border-radius: 50%;
+background-color: var(--main-color);
+display: flex;
+align-items: center;
+justify-content: center;
+animation: floatimage 1.2s ease-in-out infinite;
+}
+.preloder-logo h1{
+    color: var(--color);
+    font-size: 500;
+    font-size: 3.1rem;
+}
+@keyframes floatimage{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
